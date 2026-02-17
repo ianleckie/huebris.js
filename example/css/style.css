@@ -1,0 +1,24 @@
+html {
+    /*
+        base hues:
+        - any variable that starts with `--huebris-` (or your custom prefix) will be processed
+        - supports any valid CSS color definition
+        - gives the most range with opaque, pure hues, ie:
+            - `hsl( {{0-360}}, 100%, 50% )`
+    */
+    --huebris-primary:   purple;
+    --huebris-secondary: #669966;
+    --huebris-tertiary:  hsl( 30, 100%, 50% );
+
+    /*
+        optionally tint black and white for a hued cast to the palette
+        - supports any valid CSS color definition
+        - results will vary the farther away from pure black and white you get
+    */
+    --huebrisconf-black: color-mix( in srgb, black 90%, khaki 10% );
+    --huebrisconf-white: color-mix( in srgb, white 90%, khaki 10% );
+
+    /* other config overrides */
+    --huebrisconf-global-steps: '6';
+    --huebrisconf-debug:        'true';
+}
