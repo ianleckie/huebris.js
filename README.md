@@ -3,7 +3,7 @@ A script that automatically generates hue-based CSS color palettes with tint, to
 
 **huebris.js** simply generates and injects CSS variables (and optional utility classes), so it can easily co-exist with different workflows and approaches.
 
-> [**huebris.js**](https://huebris.probablyenough.dev/) is *(part of)* [Probably Enough](https://probablyenough.dev/) and [made by @ianleckie](https://ianleckie.me)
+> [**huebris.js**](https://github.com/ianleckie/huebris.js) is [made by @ianleckie](https://ianleckie.me)
 
 ---
 
