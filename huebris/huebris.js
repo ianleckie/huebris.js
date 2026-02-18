@@ -10,10 +10,13 @@
  * Optional palette display in HTML element: huebris.showPalette( {{document.getElementById('mypalette')}} )
  * Optional palette HTML output as obj or str: huebris.getPalette( '{{obj|str}}')
  * 
+ * More in-depth documentation available on GitHub.
+ * 
  * huebris.js <https://github.com/ianleckie/huebris.js>
  * is (part of) Probably Enough <https://huebris.probablyenough.dev/>
  * and made by @ianleckie <https://ianleckie.me/>
  */
+
 const huebris = {
 
     huebrisDefaults: {
@@ -44,12 +47,10 @@ const huebris = {
     },
 
     huebrisConfig: {},
-    baseColors: {},     // discovered from CSS: { primary: 'purple', secondary: '#00ffff', ... }
+    baseColors: {}, // discovered from CSS variables
     generatedVars: {},
     startTime: null,
-
-    // -------------------------------------------------------------------------
-
+    
     setConfig( CSSElement, variablePrefix ) {
         const el = document.querySelector( CSSElement );
         if ( ! el ) {
@@ -116,15 +117,13 @@ const huebris = {
         if ( this.huebrisConfig.debug ) console.log( 'huebris config:', this.huebrisConfig );
         return true;
     },
-
-    // -------------------------------------------------------------------------
-
+    
     discoverColors( variablePrefix ) {
         this.baseColors = {};
         const prefix = `--${ variablePrefix }-`;
 
         // Walk all stylesheets looking for rules on the configured CSSElement
-        // Note: cross-origin stylesheets will throw — we skip those gracefully
+        // Note: cross-origin stylesheets will throw an error, we skip those gracefully
         for ( const sheet of document.styleSheets ) {
             let rules;
             try {
@@ -154,19 +153,9 @@ const huebris = {
 
         if ( this.huebrisConfig.debug ) console.log( 'huebris baseColors:', this.baseColors );
     },
-
-    // -------------------------------------------------------------------------
-
+    
     addGrey() {
         this.generatedVars.grey = `color-mix( ${ this.huebrisConfig.mixMode }, var(--black) 50%, var(--white) 50% )`;
-    },
-
-    setTintToneShadeSteps() {
-        // placeholder — steps now live directly in huebrisConfig
-    },
-
-    setAlphaSteps() {
-        // placeholder — steps now live directly in huebrisConfig
     },
 
     addVariations( type, stepCount ) {
@@ -353,9 +342,7 @@ const huebris = {
         }
         htmlElement.innerHTML = this.getPalette( 'str' );
     },
-
-    // -------------------------------------------------------------------------
-
+    
     init( CSSElement = 'html', variablePrefix = 'huebris' ) {
         this.startTime = Date.now();
         if ( this.huebrisDefaults.debug ) console.log( 'Starting huebris.js...' );
