@@ -5,9 +5,7 @@ A script that automatically generates hue-based CSS color palettes with tint, to
 
 ---
 
-> [Download v1.0.0 (.zip)](https://github.com/ianleckie/huebris.js/releases/download/1.0.0/huebris-1.0.0.zip)
-
-> [See Example Palette](https://ianleckie.github.io/huebris.js/)
+> [Download v1.0.0 (.zip)](https://github.com/ianleckie/huebris.js/releases/download/1.0.0/huebris-1.0.0.zip) | [See Example Palette](https://ianleckie.github.io/huebris.js/)
 
 ---
 
