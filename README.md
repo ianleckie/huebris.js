@@ -1,5 +1,5 @@
 # huebris.js
-A script that automatically generates hue-based CSS color palettes with tint, tone, shade and alpha variations using CSS `color-mix()`.
+A script that automatically generates hue-based CSS color palettes - with tint, tone, shade and alpha variations - using CSS `color-mix()`.
 
 **huebris.js** simply generates and injects CSS variables (and optional utility classes), so it can easily co-exist with different workflows and approaches.
 
