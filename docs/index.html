@@ -35,16 +35,23 @@
     </h1>
 
     <div class="tagline">
-      A script that automatically generates hue-based CSS color palettes - with tint, tone, shade and alpha variations - using CSS <code>color-mix()</code>.
+      A script that automatically generates hue-based CSS color palettes — with tint, tone, shade and alpha variations — using CSS <code>color-mix()</code>.
     </div>
 
   </header>
 
   <main>
 
-    <section class="console">
+    <section class="console info">
 
+      <p><a href="https://github.com/ianleckie/huebris.js">huebris.js</a> simply generates and injects CSS variables (and optional utility classes) so it can co-exist with different workflows and approaches.</p>
+
+    </section>
+    
+    <section class="console">
+      
       <h2>Quickstart</h2>
+      
 
       <ol>
 
@@ -62,11 +69,11 @@
 
         <li>
 
-          <h3>Install to your site, ie:</h3>
+          <h3>Install to your project, ie:</h3>
 
           <div class="details">
 
-            <code class="block"><pre>mv ./huebris/ /path/to/site/js/vendor/huebris/</pre></code>
+            <code class="block"><pre>mv huebris.min.js /path/to/site/js/vendor/huebris/</pre></code>
 
           </div>
 
@@ -175,6 +182,10 @@
 
   /* 'value' (alpha60), 'steps' (alpha3), or 'compact' (a3) */
   --huebrisconf-output-mode: 'steps';
+
+  /* CSS color-mix interpolation options           */
+  /*   note - hue mode only applies to polar color */
+  /*   spaces: (hsl, hwb, lch, oklch, lab, oklab)  */
   --huebrisconf-color-mode:  'srgb';
   --huebrisconf-hue-mode:    'shorter';
 
@@ -183,11 +194,92 @@
 
 }</pre></code>
 
+      <h3>Step Options</h3>
+
+      <p>
+        Steps map to variations with the following percentages of mixed-in color:
+      </p>
+
+      <!-- woah... nested tables 🤯 -->
+      <table>
+        <tr>
+          <th>2 steps</th>
+          <td>
+            <table>
+              <tr>
+                <td><strong>1:</strong> 33%</td>
+                <td><strong>2:</strong> 67%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>3 steps</th>
+          <td>
+            <table>
+              <tr>
+                <td><strong>1:</strong> 25%</td>
+                <td><strong>2:</strong> 50%</td>
+                <td><strong>3:</strong> 75%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>4 steps</th>
+          <td>
+            <table>
+              <tr>
+                <td><strong>1:</strong> 20%</td>
+                <td><strong>2:</strong> 40%</td>
+                <td><strong>3:</strong> 60%</td>
+                <td><strong>4:</strong> 80%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>5 steps</th>
+          <td>
+            <table>
+              <tr>
+                <td><strong>1:</strong> 16%</td>
+                <td><strong>2:</strong> 33%</td>
+                <td><strong>3:</strong> 50%</td>
+                <td><strong>4:</strong> 67%</td>
+                <td><strong>5:</strong> 84%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>6 steps</th>
+          <td>
+            <table>
+              <tr>
+                <td><strong>1:</strong> 13%</td>
+                <td><strong>2:</strong> 29%</td>
+                <td><strong>3:</strong> 43%</td>
+                <td><strong>4:</strong> 57%</td>
+                <td><strong>5:</strong> 71%</td>
+                <td><strong>6:</strong> 87%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <p>For example — with 5 steps, <code>--primary-tint4</code> would map to:</p>
+
+      <code class="block"><pre>color-mix( in srgb, var(--primary) 33%, var(--white) 67% );</pre></code>
+
       <h3>Generated Color Palette Display</h3>
 
       <p>
         Helper functions are provided to display the generated palette for development and debugging:
       </p>
+
+      <hr>
 
       <p>Full documentation can be found on <a href="https://github.com/ianleckie/huebris.js">GitHub</a>.</p>
 
@@ -224,18 +316,16 @@
       
     <h2>tech stack:</h2>
 
-    <ul class="tech-stack">      
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i class="fa-brands fa-square-js"></i> JavaScript</a></li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt"></i> CSS3</a></li>
-      <li><a href="https://claude.ai/" target="_blank"><i class="fa-brands fa-claude"></i> Claude</a></li>
-      <li><a href="https://chatgpt.com/" target="_blank"><i class="fa-brands fa-openai"></i> ChatGPT</a></li>
-      <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
-      <li><a href="https://www.cloudflare.com/" target="_blank"><i class="fa-brands fa-cloudflare"></i> Cloudflare</a></li>
-    </ul>
     <ul class="tech-stack"> 
       <li><a href="https://html5boilerplate.com/" target="_blank"><i class="fa-brands fa-html5"></i> html5boilerplate</a></li>
       <li><a href="https://fontawesome.com/" target="_blank"><i class="fa-brands fa-font-awesome"></i> Font Awesome</a></li>
       <li><a href="https://fonts.google.com/" target="_blank"><i class="fa-brands fa-google"></i> Google Fonts</a></li>
+      <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://www.cloudflare.com/" target="_blank"><i class="fa-brands fa-cloudflare"></i> Cloudflare</a></li>
+    </ul>
+    <ul class="tech-stack">
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><i class="fa-brands fa-square-js"></i> JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt"></i> CSS3</a></li>
       <li><a href="https://opensource.org/license/mit" target="_blank"><i class="fa-solid fa-scale-balanced"></i></i> MIT License</a></li>
     </ul>
 
