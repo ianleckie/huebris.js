@@ -187,8 +187,8 @@
   /* CSS color-mix interpolation options           */
   /*   note - hue mode only applies to polar color */
   /*   spaces: (hsl, hwb, lch, oklch, lab, oklab)  */
-  --huebrisconf-color-mode:  'srgb';
-  --huebrisconf-hue-mode:    'shorter';
+  --huebrisconf-color-mode: 'srgb';
+  --huebrisconf-hue-mode:   'shorter';
 
   /* outputs debug info to console if true */
   --huebrisconf-debug: 'false';   
@@ -313,6 +313,139 @@
 &lt;/style&gt;</code></pre>
 
       <h3>Output</h3>
+
+      <pre><code>html {
+    --black: black;
+    --white: white;
+    --primary: purple;
+    --grey: color-mix( in srgb, var(--black) 50%, var(--white) 50% );
+    --primary-tint1: color-mix( in srgb, var(--primary) 80%, var(--white) 20% );
+    --primary-tint2: color-mix( in srgb, var(--primary) 60%, var(--white) 40% );
+    --primary-tint3: color-mix( in srgb, var(--primary) 40%, var(--white) 60% );
+    --primary-tint4: color-mix( in srgb, var(--primary) 20%, var(--white) 80% );
+    --grey-tint1: color-mix( in srgb, var(--grey) 80%, var(--white) 20% );
+    --grey-tint2: color-mix( in srgb, var(--grey) 60%, var(--white) 40% );
+    --grey-tint3: color-mix( in srgb, var(--grey) 40%, var(--white) 60% );
+    --grey-tint4: color-mix( in srgb, var(--grey) 20%, var(--white) 80% );
+    --primary-tone1: color-mix( in srgb, var(--primary) 80%, var(--grey) 20% );
+    --primary-tone2: color-mix( in srgb, var(--primary) 60%, var(--grey) 40% );
+    --primary-tone3: color-mix( in srgb, var(--primary) 40%, var(--grey) 60% );
+    --primary-tone4: color-mix( in srgb, var(--primary) 20%, var(--grey) 80% );
+    --primary-shade1: color-mix( in srgb, var(--primary) 80%, var(--black) 20% );
+    --primary-shade2: color-mix( in srgb, var(--primary) 60%, var(--black) 40% );
+    --primary-shade3: color-mix( in srgb, var(--primary) 40%, var(--black) 60% );
+    --primary-shade4: color-mix( in srgb, var(--primary) 20%, var(--black) 80% );
+    --grey-shade1: color-mix( in srgb, var(--grey) 80%, var(--black) 20% );
+    --grey-shade2: color-mix( in srgb, var(--grey) 60%, var(--black) 40% );
+    --grey-shade3: color-mix( in srgb, var(--grey) 40%, var(--black) 60% );
+    --grey-shade4: color-mix( in srgb, var(--grey) 20%, var(--black) 80% );
+    --black-alpha1: color-mix( in srgb, var(--black) 80%, transparent 20% );
+    --black-alpha2: color-mix( in srgb, var(--black) 60%, transparent 40% );
+    --black-alpha3: color-mix( in srgb, var(--black) 40%, transparent 60% );
+    --black-alpha4: color-mix( in srgb, var(--black) 20%, transparent 80% );
+    --white-alpha1: color-mix( in srgb, var(--white) 80%, transparent 20% );
+    --white-alpha2: color-mix( in srgb, var(--white) 60%, transparent 40% );
+    --white-alpha3: color-mix( in srgb, var(--white) 40%, transparent 60% );
+    --white-alpha4: color-mix( in srgb, var(--white) 20%, transparent 80% );
+    --grey-alpha1: color-mix( in srgb, var(--grey) 80%, transparent 20% );
+    --grey-alpha2: color-mix( in srgb, var(--grey) 60%, transparent 40% );
+    --grey-alpha3: color-mix( in srgb, var(--grey) 40%, transparent 60% );
+    --grey-alpha4: color-mix( in srgb, var(--grey) 20%, transparent 80% );
+    --primary-alpha1: color-mix( in srgb, var(--primary) 80%, transparent 20% );
+    --primary-alpha2: color-mix( in srgb, var(--primary) 60%, transparent 40% );
+    --primary-alpha3: color-mix( in srgb, var(--primary) 40%, transparent 60% );
+    --primary-alpha4: color-mix( in srgb, var(--primary) 20%, transparent 80% );
+    --primary-tint1-alpha1: color-mix( in srgb, var(--primary-tint1) 80%, transparent 20% );
+    --primary-tint1-alpha2: color-mix( in srgb, var(--primary-tint1) 60%, transparent 40% );
+    --primary-tint1-alpha3: color-mix( in srgb, var(--primary-tint1) 40%, transparent 60% );
+    --primary-tint1-alpha4: color-mix( in srgb, var(--primary-tint1) 20%, transparent 80% );
+    --primary-tint2-alpha1: color-mix( in srgb, var(--primary-tint2) 80%, transparent 20% );
+    --primary-tint2-alpha2: color-mix( in srgb, var(--primary-tint2) 60%, transparent 40% );
+    --primary-tint2-alpha3: color-mix( in srgb, var(--primary-tint2) 40%, transparent 60% );
+    --primary-tint2-alpha4: color-mix( in srgb, var(--primary-tint2) 20%, transparent 80% );
+    --primary-tint3-alpha1: color-mix( in srgb, var(--primary-tint3) 80%, transparent 20% );
+    --primary-tint3-alpha2: color-mix( in srgb, var(--primary-tint3) 60%, transparent 40% );
+    --primary-tint3-alpha3: color-mix( in srgb, var(--primary-tint3) 40%, transparent 60% );
+    --primary-tint3-alpha4: color-mix( in srgb, var(--primary-tint3) 20%, transparent 80% );
+    --primary-tint4-alpha1: color-mix( in srgb, var(--primary-tint4) 80%, transparent 20% );
+    --primary-tint4-alpha2: color-mix( in srgb, var(--primary-tint4) 60%, transparent 40% );
+    --primary-tint4-alpha3: color-mix( in srgb, var(--primary-tint4) 40%, transparent 60% );
+    --primary-tint4-alpha4: color-mix( in srgb, var(--primary-tint4) 20%, transparent 80% );
+    --grey-tint1-alpha1: color-mix( in srgb, var(--grey-tint1) 80%, transparent 20% );
+    --grey-tint1-alpha2: color-mix( in srgb, var(--grey-tint1) 60%, transparent 40% );
+    --grey-tint1-alpha3: color-mix( in srgb, var(--grey-tint1) 40%, transparent 60% );
+    --grey-tint1-alpha4: color-mix( in srgb, var(--grey-tint1) 20%, transparent 80% );
+    --grey-tint2-alpha1: color-mix( in srgb, var(--grey-tint2) 80%, transparent 20% );
+    --grey-tint2-alpha2: color-mix( in srgb, var(--grey-tint2) 60%, transparent 40% );
+    --grey-tint2-alpha3: color-mix( in srgb, var(--grey-tint2) 40%, transparent 60% );
+    --grey-tint2-alpha4: color-mix( in srgb, var(--grey-tint2) 20%, transparent 80% );
+    --grey-tint3-alpha1: color-mix( in srgb, var(--grey-tint3) 80%, transparent 20% );
+    --grey-tint3-alpha2: color-mix( in srgb, var(--grey-tint3) 60%, transparent 40% );
+    --grey-tint3-alpha3: color-mix( in srgb, var(--grey-tint3) 40%, transparent 60% );
+    --grey-tint3-alpha4: color-mix( in srgb, var(--grey-tint3) 20%, transparent 80% );
+    --grey-tint4-alpha1: color-mix( in srgb, var(--grey-tint4) 80%, transparent 20% );
+    --grey-tint4-alpha2: color-mix( in srgb, var(--grey-tint4) 60%, transparent 40% );
+    --grey-tint4-alpha3: color-mix( in srgb, var(--grey-tint4) 40%, transparent 60% );
+    --grey-tint4-alpha4: color-mix( in srgb, var(--grey-tint4) 20%, transparent 80% );
+    --primary-tone1-alpha1: color-mix( in srgb, var(--primary-tone1) 80%, transparent 20% );
+    --primary-tone1-alpha2: color-mix( in srgb, var(--primary-tone1) 60%, transparent 40% );
+    --primary-tone1-alpha3: color-mix( in srgb, var(--primary-tone1) 40%, transparent 60% );
+    --primary-tone1-alpha4: color-mix( in srgb, var(--primary-tone1) 20%, transparent 80% );
+    --primary-tone2-alpha1: color-mix( in srgb, var(--primary-tone2) 80%, transparent 20% );
+    --primary-tone2-alpha2: color-mix( in srgb, var(--primary-tone2) 60%, transparent 40% );
+    --primary-tone2-alpha3: color-mix( in srgb, var(--primary-tone2) 40%, transparent 60% );
+    --primary-tone2-alpha4: color-mix( in srgb, var(--primary-tone2) 20%, transparent 80% );
+    --primary-tone3-alpha1: color-mix( in srgb, var(--primary-tone3) 80%, transparent 20% );
+    --primary-tone3-alpha2: color-mix( in srgb, var(--primary-tone3) 60%, transparent 40% );
+    --primary-tone3-alpha3: color-mix( in srgb, var(--primary-tone3) 40%, transparent 60% );
+    --primary-tone3-alpha4: color-mix( in srgb, var(--primary-tone3) 20%, transparent 80% );
+    --primary-tone4-alpha1: color-mix( in srgb, var(--primary-tone4) 80%, transparent 20% );
+    --primary-tone4-alpha2: color-mix( in srgb, var(--primary-tone4) 60%, transparent 40% );
+    --primary-tone4-alpha3: color-mix( in srgb, var(--primary-tone4) 40%, transparent 60% );
+    --primary-tone4-alpha4: color-mix( in srgb, var(--primary-tone4) 20%, transparent 80% );
+    --primary-shade1-alpha1: color-mix( in srgb, var(--primary-shade1) 80%, transparent 20% );
+    --primary-shade1-alpha2: color-mix( in srgb, var(--primary-shade1) 60%, transparent 40% );
+    --primary-shade1-alpha3: color-mix( in srgb, var(--primary-shade1) 40%, transparent 60% );
+    --primary-shade1-alpha4: color-mix( in srgb, var(--primary-shade1) 20%, transparent 80% );
+    --primary-shade2-alpha1: color-mix( in srgb, var(--primary-shade2) 80%, transparent 20% );
+    --primary-shade2-alpha2: color-mix( in srgb, var(--primary-shade2) 60%, transparent 40% );
+    --primary-shade2-alpha3: color-mix( in srgb, var(--primary-shade2) 40%, transparent 60% );
+    --primary-shade2-alpha4: color-mix( in srgb, var(--primary-shade2) 20%, transparent 80% );
+    --primary-shade3-alpha1: color-mix( in srgb, var(--primary-shade3) 80%, transparent 20% );
+    --primary-shade3-alpha2: color-mix( in srgb, var(--primary-shade3) 60%, transparent 40% );
+    --primary-shade3-alpha3: color-mix( in srgb, var(--primary-shade3) 40%, transparent 60% );
+    --primary-shade3-alpha4: color-mix( in srgb, var(--primary-shade3) 20%, transparent 80% );
+    --primary-shade4-alpha1: color-mix( in srgb, var(--primary-shade4) 80%, transparent 20% );
+    --primary-shade4-alpha2: color-mix( in srgb, var(--primary-shade4) 60%, transparent 40% );
+    --primary-shade4-alpha3: color-mix( in srgb, var(--primary-shade4) 40%, transparent 60% );
+    --primary-shade4-alpha4: color-mix( in srgb, var(--primary-shade4) 20%, transparent 80% );
+    --grey-shade1-alpha1: color-mix( in srgb, var(--grey-shade1) 80%, transparent 20% );
+    --grey-shade1-alpha2: color-mix( in srgb, var(--grey-shade1) 60%, transparent 40% );
+    --grey-shade1-alpha3: color-mix( in srgb, var(--grey-shade1) 40%, transparent 60% );
+    --grey-shade1-alpha4: color-mix( in srgb, var(--grey-shade1) 20%, transparent 80% );
+    --grey-shade2-alpha1: color-mix( in srgb, var(--grey-shade2) 80%, transparent 20% );
+    --grey-shade2-alpha2: color-mix( in srgb, var(--grey-shade2) 60%, transparent 40% );
+    --grey-shade2-alpha3: color-mix( in srgb, var(--grey-shade2) 40%, transparent 60% );
+    --grey-shade2-alpha4: color-mix( in srgb, var(--grey-shade2) 20%, transparent 80% );
+    --grey-shade3-alpha1: color-mix( in srgb, var(--grey-shade3) 80%, transparent 20% );
+    --grey-shade3-alpha2: color-mix( in srgb, var(--grey-shade3) 60%, transparent 40% );
+    --grey-shade3-alpha3: color-mix( in srgb, var(--grey-shade3) 40%, transparent 60% );
+    --grey-shade3-alpha4: color-mix( in srgb, var(--grey-shade3) 20%, transparent 80% );
+    --grey-shade4-alpha1: color-mix( in srgb, var(--grey-shade4) 80%, transparent 20% );
+    --grey-shade4-alpha2: color-mix( in srgb, var(--grey-shade4) 60%, transparent 40% );
+    --grey-shade4-alpha3: color-mix( in srgb, var(--grey-shade4) 40%, transparent 60% );
+    --grey-shade4-alpha4: color-mix( in srgb, var(--grey-shade4) 20%, transparent 80% );
+}
+
+.black { background-color: var(--black); }
+.black-text { color: var(--black); }
+.white { background-color: var(--white); }
+.white-text { color: var(--white); }
+.primary { background-color: var(--primary); }
+.primary-text { color: var(--primary); }
+.grey { background-color: var(--grey); }
+.grey-text { color: var(--grey); }
+/* etc... */</code></pre>
 
     </section>
 
