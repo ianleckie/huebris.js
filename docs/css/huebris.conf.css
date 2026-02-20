@@ -1,0 +1,8 @@
+html {
+    --huebris-primary:   rgb(46, 63, 79);
+    --huebris-secondary: rgb(202, 230, 228);
+
+    --huebris-black: color-mix( in srgb, var(--primary) 20%, black 80% );
+
+    --huebrisconf-global-steps: '4';
+}

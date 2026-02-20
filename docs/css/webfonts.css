@@ -1,0 +1,32 @@
+/* Webfont setup */
+@font-face {
+  font-display: swap;
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/BreeSerif-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Caprasimo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Caprasimo-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Inconsolata-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inconsolata Bold';
+  font-style: bold;
+  font-weight: 600;
+  src: url(/fonts/Inconsolata-Bold.woff2) format('woff2');
+}
