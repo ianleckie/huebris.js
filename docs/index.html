@@ -9,6 +9,7 @@
   <title>huebris.js</title>
 
   <!-- site styles -->
+  <link rel="stylesheet" href="css/dracula.css">
   <link rel="stylesheet" href="css/huebris.conf.css">
   <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
 
@@ -73,7 +74,7 @@
 
           <div class="details">
 
-            <code class="block"><pre>mv huebris.min.js /path/to/site/js/vendor/huebris/</pre></code>
+            <pre><code class="language-shell">mv huebris.min.js /path/to/site/js/vendor/huebris/ </code></pre>
 
           </div>
 
@@ -85,8 +86,8 @@
 
           <div class="details">
 
-            <code class="block"><pre>&lt;script src="/js/vendor/huebris/huebris.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;huebris.init();&lt;/script&gt;</pre></code>
+            <pre><code>&lt;script src="/js/vendor/huebris/huebris.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;huebris.init();&lt;/script&gt;</code></pre>
 
           </div>
 
@@ -98,10 +99,10 @@
 
           <div class="details">
 
-            <code class="block"><pre>html {
+            <pre><code class="language-css">html {
   --huebris-primary:   purple;
   --huebris-secondary: turquoise;
-}</pre></code>
+}</code></pre>
 
           </div>
 
@@ -121,7 +122,7 @@
         You can change the element where you set your CSS variables and set a custom prefix on init, ie:
       </p>
       
-      <code class="block"><pre>huebris.init( 'html', 'huebris' );</pre></code>
+      <pre><code>huebris.init( 'html', 'huebris' );</code></pre>
 
       <h3>CSS Variables</h3>
 
@@ -131,13 +132,13 @@
         CSS variables that start with <code>--huebris-</code> (or your custom-defined prefix) get processed as hues:
       </p>
 
-      <code class="block"><pre>html {
+      <pre><code>html {
 
   --huebris-primary:   purple;
   --huebris-secondary: #669966;
   --huebris-tertiary:  hsl( 30, 100%, 50% );
 
-}</pre></code>
+}</code></pre>
 
       <p>
         Other options are set via pre-defined CSS variables beginning with <code>--huebrisconf-</code>.
@@ -147,18 +148,18 @@
         Optionally tint black and white for a hued cast to the palette (default is simply <code>black</code> and <code>white</code>):
       </p>
 
-      <code class="block"><pre>html {
+      <pre><code>html {
 
   --huebrisconf-black: color-mix( in srgb, black 90%, khaki 10% );
   --huebrisconf-white: color-mix( in srgb, white 90%, khaki 10% );
 
-}</pre></code>
+}</code></pre>
 
       <p>
         Step settings - control how many variations to generate:
       </p>
 
-      <code class="block"><pre>html {
+      <pre><code>html {
 
   /* 2-6, or 0 to skip: number of variations to generate */
   --huebrisconf-tint-steps:  '4';
@@ -169,13 +170,13 @@
   /* overrides the above settings if > 0: */
   --huebrisconf-global-steps: '0';
 
-}</pre></code>
+}</code></pre>
 
       <p>
         Output settings:
       </p>
 
-      <code class="block"><pre>html {
+      <pre><code>html {
 
   /* generate utility classes or just vars */
   --huebrisconf-utility-classes: 'true';
@@ -192,7 +193,7 @@
   /* outputs debug info to console if true */
   --huebrisconf-debug: 'false';   
 
-}</pre></code>
+}</code></pre>
 
       <h3>Step Options</h3>
 
@@ -271,13 +272,27 @@
 
       <p>For example — with 5 steps, <code>--primary-tint4</code> would map to:</p>
 
-      <code class="block"><pre>color-mix( in srgb, var(--primary) 33%, var(--white) 67% );</pre></code>
+      <pre><code>color-mix( in srgb, var(--primary) 33%, var(--white) 67% );</code></pre>
 
       <h3>Generated Color Palette Display</h3>
 
       <p>
         Helper functions are provided to display the generated palette for development and debugging:
       </p>
+
+      <h4>Inject the palette into an existing element:</h4>
+
+      <pre><code>&lt;div id="palette"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  huebris.showPalette( document.getElementById( 'palette' ) );
+&lt;/script&gt;</code></pre>
+
+      <h4><em>Or</em> get the palette as an object or string:</j4>
+
+      <pre><code>&lt;script&gt;
+  const palette = huebris.getPalette( 'obj' ); // or 'str'
+&lt;/script&gt;</code></pre>
 
       <hr>
 
@@ -291,11 +306,11 @@
 
       <h3>Setup</h3>
 
-      <code class="block"><pre>&lt;style&gt;
+      <pre><code>&lt;style&gt;
   html {
     --huebris-primary: purple;
   }
-&lt;/style&gt;</pre></code>
+&lt;/style&gt;</code></pre>
 
       <h3>Output</h3>
 
@@ -308,7 +323,7 @@
     <div class="console colophon">
 
       <a href="https://github.com/ianleckie/huebris.js">huebris.js</a> is (part of) <a href="https://probablyenough.dev">Probably Enough</a><br>
-      and made by <a href="https://hire.ianleckie.me">@ianleckie</a> :
+      made by <a href="https://hire.ianleckie.me">@ianleckie</a> :
       <a href="https://github.com/ianleckie/">github</a> |
       <a href="https://www.linkedin.com/in/ian-leckie/">linkedin</a>
 
@@ -330,11 +345,13 @@
     </ul>
 
   </footer>
-
   <script src="https://kit.fontawesome.com/481515541d.js" crossorigin="anonymous"></script>
   <script src="js/vendor/huebris.min.js"></script>
   <script>huebris.init();</script>
   <script src="js/main.js"></script>
+
+  <script src="js/vendor/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 </body>
 
