@@ -314,7 +314,8 @@
 
       <h3>Output</h3>
 
-      <pre><code>html {
+      <pre><code>/* Variables */
+html {
     --black: black;
     --white: white;
     --primary: purple;
@@ -437,6 +438,7 @@
     --grey-shade4-alpha4: color-mix( in srgb, var(--grey-shade4) 20%, transparent 80% );
 }
 
+/* Optional utility classes: */
 .black { background-color: var(--black); }
 .black-text { color: var(--black); }
 .white { background-color: var(--white); }
@@ -446,6 +448,10 @@
 .grey { background-color: var(--grey); }
 .grey-text { color: var(--grey); }
 /* etc... */</code></pre>
+
+      <h3>Palette Output</h3>
+
+      <div id="palette"></div>
 
     </section>
 
@@ -480,7 +486,10 @@
   </footer>
   <script src="https://kit.fontawesome.com/481515541d.js" crossorigin="anonymous"></script>
   <script src="js/vendor/huebris.min.js"></script>
-  <script>huebris.init();</script>
+  <script>
+    huebris.init();
+    huebris.showPalette( document.getElementById( 'palette' ) );
+  </script>
   <script src="js/main.js"></script>
 
   <script src="js/vendor/highlight/highlight.min.js"></script>

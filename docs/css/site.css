@@ -273,14 +273,17 @@ table {
             scale: 0.97;
         }
 
+#palette {
+    margin: 1rem 0;
+}
 
-/* Interactions */
+
+/* Scrollbars */
 
 /* Fallback for WebKit */
 @supports selector(::-webkit-scrollbar) {
   ::-webkit-scrollbar {
     width: 10px;
-    padding: 0.5rem 0;
   }
   ::-webkit-scrollbar-thumb {
     background: var(--secondary-alpha4);
@@ -294,7 +297,7 @@ table {
 /* Modern browsers */
 @supports (scrollbar-width: auto) {
   * {
+    scrollbar-color: var(--secondary-alpha4) transparent;
     scrollbar-width: thick;
-    scrollbar-color:  var(--secondary-alpha4) transparent;
   }
 }
