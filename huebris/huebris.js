@@ -141,8 +141,10 @@ const huebris = {
 
                     // '--huebris-primary' → 'primary'
                     const name = prop.slice( prefix.length );
-                    const value = rule.style.getPropertyValue( prop ).trim();
-                    this.baseColors[ name ] = value;
+                    if ( name != 'black' & name != 'white' & name != 'grey' ) {
+                        const value = rule.style.getPropertyValue( prop ).trim();
+                        this.baseColors[ name ] = value;
+                    }
                 }
             }
         }
