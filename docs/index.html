@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/dracula.css">
   <link rel="stylesheet" href="css/huebris.conf.css">
   <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/palette.css" as="style" onload="this.rel='stylesheet'">
 
   <!-- meta -->
   <meta name="description" content="A script that automatically generates hue-based CSS color palettes">
@@ -449,9 +450,928 @@ html {
 .grey-text { color: var(--grey); }
 /* etc... */</code></pre>
 
-      <h3>Palette Output</h3>
+      <h3>Palette Display</h3>
 
-      <div id="palette"></div>
+      <div class="huebris-palette">
+          <div class="huebris-card">
+              <div class="huebris-card__header">--black</div>
+              <div class="huebris-card__base">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black)" title="--black">
+                      <span class="huebris-swatch__label">black</span>
+                  </div>
+              </div>
+              <div class="huebris-row huebris-row--alpha">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-alpha1)"
+                      title="--black-alpha1">
+                      <span class="huebris-swatch__label">black-alpha1</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-alpha2)"
+                      title="--black-alpha2">
+                      <span class="huebris-swatch__label">black-alpha2</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-alpha3)"
+                      title="--black-alpha3">
+                      <span class="huebris-swatch__label">black-alpha3</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-alpha4)"
+                      title="--black-alpha4">
+                      <span class="huebris-swatch__label">black-alpha4</span>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tint1)"
+                          title="--black-tint1">
+                          <span class="huebris-swatch__label">black-tint1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint1-alpha1)"
+                          title="--black-tint1-alpha1">
+                          <span class="huebris-swatch__label">black-tint1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint1-alpha2)"
+                          title="--black-tint1-alpha2">
+                          <span class="huebris-swatch__label">black-tint1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint1-alpha3)"
+                          title="--black-tint1-alpha3">
+                          <span class="huebris-swatch__label">black-tint1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint1-alpha4)"
+                          title="--black-tint1-alpha4">
+                          <span class="huebris-swatch__label">black-tint1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tint2)"
+                          title="--black-tint2">
+                          <span class="huebris-swatch__label">black-tint2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint2-alpha1)"
+                          title="--black-tint2-alpha1">
+                          <span class="huebris-swatch__label">black-tint2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint2-alpha2)"
+                          title="--black-tint2-alpha2">
+                          <span class="huebris-swatch__label">black-tint2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint2-alpha3)"
+                          title="--black-tint2-alpha3">
+                          <span class="huebris-swatch__label">black-tint2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint2-alpha4)"
+                          title="--black-tint2-alpha4">
+                          <span class="huebris-swatch__label">black-tint2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tint3)"
+                          title="--black-tint3">
+                          <span class="huebris-swatch__label">black-tint3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint3-alpha1)"
+                          title="--black-tint3-alpha1">
+                          <span class="huebris-swatch__label">black-tint3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint3-alpha2)"
+                          title="--black-tint3-alpha2">
+                          <span class="huebris-swatch__label">black-tint3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint3-alpha3)"
+                          title="--black-tint3-alpha3">
+                          <span class="huebris-swatch__label">black-tint3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint3-alpha4)"
+                          title="--black-tint3-alpha4">
+                          <span class="huebris-swatch__label">black-tint3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tint4)"
+                          title="--black-tint4">
+                          <span class="huebris-swatch__label">black-tint4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint4-alpha1)"
+                          title="--black-tint4-alpha1">
+                          <span class="huebris-swatch__label">black-tint4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint4-alpha2)"
+                          title="--black-tint4-alpha2">
+                          <span class="huebris-swatch__label">black-tint4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint4-alpha3)"
+                          title="--black-tint4-alpha3">
+                          <span class="huebris-swatch__label">black-tint4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tint4-alpha4)"
+                          title="--black-tint4-alpha4">
+                          <span class="huebris-swatch__label">black-tint4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tone1)"
+                          title="--black-tone1">
+                          <span class="huebris-swatch__label">black-tone1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone1-alpha1)"
+                          title="--black-tone1-alpha1">
+                          <span class="huebris-swatch__label">black-tone1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone1-alpha2)"
+                          title="--black-tone1-alpha2">
+                          <span class="huebris-swatch__label">black-tone1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone1-alpha3)"
+                          title="--black-tone1-alpha3">
+                          <span class="huebris-swatch__label">black-tone1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone1-alpha4)"
+                          title="--black-tone1-alpha4">
+                          <span class="huebris-swatch__label">black-tone1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tone2)"
+                          title="--black-tone2">
+                          <span class="huebris-swatch__label">black-tone2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone2-alpha1)"
+                          title="--black-tone2-alpha1">
+                          <span class="huebris-swatch__label">black-tone2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone2-alpha2)"
+                          title="--black-tone2-alpha2">
+                          <span class="huebris-swatch__label">black-tone2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone2-alpha3)"
+                          title="--black-tone2-alpha3">
+                          <span class="huebris-swatch__label">black-tone2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone2-alpha4)"
+                          title="--black-tone2-alpha4">
+                          <span class="huebris-swatch__label">black-tone2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tone3)"
+                          title="--black-tone3">
+                          <span class="huebris-swatch__label">black-tone3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone3-alpha1)"
+                          title="--black-tone3-alpha1">
+                          <span class="huebris-swatch__label">black-tone3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone3-alpha2)"
+                          title="--black-tone3-alpha2">
+                          <span class="huebris-swatch__label">black-tone3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone3-alpha3)"
+                          title="--black-tone3-alpha3">
+                          <span class="huebris-swatch__label">black-tone3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone3-alpha4)"
+                          title="--black-tone3-alpha4">
+                          <span class="huebris-swatch__label">black-tone3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--black-tone4)"
+                          title="--black-tone4">
+                          <span class="huebris-swatch__label">black-tone4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone4-alpha1)"
+                          title="--black-tone4-alpha1">
+                          <span class="huebris-swatch__label">black-tone4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone4-alpha2)"
+                          title="--black-tone4-alpha2">
+                          <span class="huebris-swatch__label">black-tone4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone4-alpha3)"
+                          title="--black-tone4-alpha3">
+                          <span class="huebris-swatch__label">black-tone4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--black-tone4-alpha4)"
+                          title="--black-tone4-alpha4">
+                          <span class="huebris-swatch__label">black-tone4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="huebris-card">
+              <div class="huebris-card__header">--white</div>
+              <div class="huebris-card__base">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white)" title="--white">
+                      <span class="huebris-swatch__label">white</span>
+                  </div>
+              </div>
+              <div class="huebris-row huebris-row--alpha">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-alpha1)"
+                      title="--white-alpha1">
+                      <span class="huebris-swatch__label">white-alpha1</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-alpha2)"
+                      title="--white-alpha2">
+                      <span class="huebris-swatch__label">white-alpha2</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-alpha3)"
+                      title="--white-alpha3">
+                      <span class="huebris-swatch__label">white-alpha3</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-alpha4)"
+                      title="--white-alpha4">
+                      <span class="huebris-swatch__label">white-alpha4</span>
+                  </div>
+              </div>
+
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-tone1)"
+                          title="--white-tone1">
+                          <span class="huebris-swatch__label">white-tone1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone1-alpha1)"
+                          title="--white-tone1-alpha1">
+                          <span class="huebris-swatch__label">white-tone1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone1-alpha2)"
+                          title="--white-tone1-alpha2">
+                          <span class="huebris-swatch__label">white-tone1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone1-alpha3)"
+                          title="--white-tone1-alpha3">
+                          <span class="huebris-swatch__label">white-tone1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone1-alpha4)"
+                          title="--white-tone1-alpha4">
+                          <span class="huebris-swatch__label">white-tone1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-tone2)"
+                          title="--white-tone2">
+                          <span class="huebris-swatch__label">white-tone2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone2-alpha1)"
+                          title="--white-tone2-alpha1">
+                          <span class="huebris-swatch__label">white-tone2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone2-alpha2)"
+                          title="--white-tone2-alpha2">
+                          <span class="huebris-swatch__label">white-tone2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone2-alpha3)"
+                          title="--white-tone2-alpha3">
+                          <span class="huebris-swatch__label">white-tone2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone2-alpha4)"
+                          title="--white-tone2-alpha4">
+                          <span class="huebris-swatch__label">white-tone2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-tone3)"
+                          title="--white-tone3">
+                          <span class="huebris-swatch__label">white-tone3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone3-alpha1)"
+                          title="--white-tone3-alpha1">
+                          <span class="huebris-swatch__label">white-tone3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone3-alpha2)"
+                          title="--white-tone3-alpha2">
+                          <span class="huebris-swatch__label">white-tone3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone3-alpha3)"
+                          title="--white-tone3-alpha3">
+                          <span class="huebris-swatch__label">white-tone3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone3-alpha4)"
+                          title="--white-tone3-alpha4">
+                          <span class="huebris-swatch__label">white-tone3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-tone4)"
+                          title="--white-tone4">
+                          <span class="huebris-swatch__label">white-tone4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone4-alpha1)"
+                          title="--white-tone4-alpha1">
+                          <span class="huebris-swatch__label">white-tone4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone4-alpha2)"
+                          title="--white-tone4-alpha2">
+                          <span class="huebris-swatch__label">white-tone4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone4-alpha3)"
+                          title="--white-tone4-alpha3">
+                          <span class="huebris-swatch__label">white-tone4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-tone4-alpha4)"
+                          title="--white-tone4-alpha4">
+                          <span class="huebris-swatch__label">white-tone4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-shade1)"
+                          title="--white-shade1">
+                          <span class="huebris-swatch__label">white-shade1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade1-alpha1)"
+                          title="--white-shade1-alpha1">
+                          <span class="huebris-swatch__label">white-shade1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade1-alpha2)"
+                          title="--white-shade1-alpha2">
+                          <span class="huebris-swatch__label">white-shade1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade1-alpha3)"
+                          title="--white-shade1-alpha3">
+                          <span class="huebris-swatch__label">white-shade1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade1-alpha4)"
+                          title="--white-shade1-alpha4">
+                          <span class="huebris-swatch__label">white-shade1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-shade2)"
+                          title="--white-shade2">
+                          <span class="huebris-swatch__label">white-shade2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade2-alpha1)"
+                          title="--white-shade2-alpha1">
+                          <span class="huebris-swatch__label">white-shade2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade2-alpha2)"
+                          title="--white-shade2-alpha2">
+                          <span class="huebris-swatch__label">white-shade2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade2-alpha3)"
+                          title="--white-shade2-alpha3">
+                          <span class="huebris-swatch__label">white-shade2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade2-alpha4)"
+                          title="--white-shade2-alpha4">
+                          <span class="huebris-swatch__label">white-shade2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-shade3)"
+                          title="--white-shade3">
+                          <span class="huebris-swatch__label">white-shade3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade3-alpha1)"
+                          title="--white-shade3-alpha1">
+                          <span class="huebris-swatch__label">white-shade3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade3-alpha2)"
+                          title="--white-shade3-alpha2">
+                          <span class="huebris-swatch__label">white-shade3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade3-alpha3)"
+                          title="--white-shade3-alpha3">
+                          <span class="huebris-swatch__label">white-shade3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade3-alpha4)"
+                          title="--white-shade3-alpha4">
+                          <span class="huebris-swatch__label">white-shade3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--white-shade4)"
+                          title="--white-shade4">
+                          <span class="huebris-swatch__label">white-shade4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade4-alpha1)"
+                          title="--white-shade4-alpha1">
+                          <span class="huebris-swatch__label">white-shade4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade4-alpha2)"
+                          title="--white-shade4-alpha2">
+                          <span class="huebris-swatch__label">white-shade4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade4-alpha3)"
+                          title="--white-shade4-alpha3">
+                          <span class="huebris-swatch__label">white-shade4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--white-shade4-alpha4)"
+                          title="--white-shade4-alpha4">
+                          <span class="huebris-swatch__label">white-shade4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="huebris-card">
+              <div class="huebris-card__header">--grey</div>
+              <div class="huebris-card__base">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey)" title="--grey">
+                      <span class="huebris-swatch__label">grey</span>
+                  </div>
+              </div>
+              <div class="huebris-row huebris-row--alpha">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-alpha1)"
+                      title="--grey-alpha1">
+                      <span class="huebris-swatch__label">grey-alpha1</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-alpha2)"
+                      title="--grey-alpha2">
+                      <span class="huebris-swatch__label">grey-alpha2</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-alpha3)"
+                      title="--grey-alpha3">
+                      <span class="huebris-swatch__label">grey-alpha3</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-alpha4)"
+                      title="--grey-alpha4">
+                      <span class="huebris-swatch__label">grey-alpha4</span>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-tint1)"
+                          title="--grey-tint1">
+                          <span class="huebris-swatch__label">grey-tint1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint1-alpha1)"
+                          title="--grey-tint1-alpha1">
+                          <span class="huebris-swatch__label">grey-tint1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint1-alpha2)"
+                          title="--grey-tint1-alpha2">
+                          <span class="huebris-swatch__label">grey-tint1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint1-alpha3)"
+                          title="--grey-tint1-alpha3">
+                          <span class="huebris-swatch__label">grey-tint1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint1-alpha4)"
+                          title="--grey-tint1-alpha4">
+                          <span class="huebris-swatch__label">grey-tint1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-tint2)"
+                          title="--grey-tint2">
+                          <span class="huebris-swatch__label">grey-tint2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint2-alpha1)"
+                          title="--grey-tint2-alpha1">
+                          <span class="huebris-swatch__label">grey-tint2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint2-alpha2)"
+                          title="--grey-tint2-alpha2">
+                          <span class="huebris-swatch__label">grey-tint2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint2-alpha3)"
+                          title="--grey-tint2-alpha3">
+                          <span class="huebris-swatch__label">grey-tint2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint2-alpha4)"
+                          title="--grey-tint2-alpha4">
+                          <span class="huebris-swatch__label">grey-tint2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-tint3)"
+                          title="--grey-tint3">
+                          <span class="huebris-swatch__label">grey-tint3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint3-alpha1)"
+                          title="--grey-tint3-alpha1">
+                          <span class="huebris-swatch__label">grey-tint3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint3-alpha2)"
+                          title="--grey-tint3-alpha2">
+                          <span class="huebris-swatch__label">grey-tint3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint3-alpha3)"
+                          title="--grey-tint3-alpha3">
+                          <span class="huebris-swatch__label">grey-tint3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint3-alpha4)"
+                          title="--grey-tint3-alpha4">
+                          <span class="huebris-swatch__label">grey-tint3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-tint4)"
+                          title="--grey-tint4">
+                          <span class="huebris-swatch__label">grey-tint4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint4-alpha1)"
+                          title="--grey-tint4-alpha1">
+                          <span class="huebris-swatch__label">grey-tint4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint4-alpha2)"
+                          title="--grey-tint4-alpha2">
+                          <span class="huebris-swatch__label">grey-tint4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint4-alpha3)"
+                          title="--grey-tint4-alpha3">
+                          <span class="huebris-swatch__label">grey-tint4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-tint4-alpha4)"
+                          title="--grey-tint4-alpha4">
+                          <span class="huebris-swatch__label">grey-tint4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-shade1)"
+                          title="--grey-shade1">
+                          <span class="huebris-swatch__label">grey-shade1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade1-alpha1)"
+                          title="--grey-shade1-alpha1">
+                          <span class="huebris-swatch__label">grey-shade1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade1-alpha2)"
+                          title="--grey-shade1-alpha2">
+                          <span class="huebris-swatch__label">grey-shade1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade1-alpha3)"
+                          title="--grey-shade1-alpha3">
+                          <span class="huebris-swatch__label">grey-shade1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade1-alpha4)"
+                          title="--grey-shade1-alpha4">
+                          <span class="huebris-swatch__label">grey-shade1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-shade2)"
+                          title="--grey-shade2">
+                          <span class="huebris-swatch__label">grey-shade2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade2-alpha1)"
+                          title="--grey-shade2-alpha1">
+                          <span class="huebris-swatch__label">grey-shade2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade2-alpha2)"
+                          title="--grey-shade2-alpha2">
+                          <span class="huebris-swatch__label">grey-shade2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade2-alpha3)"
+                          title="--grey-shade2-alpha3">
+                          <span class="huebris-swatch__label">grey-shade2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade2-alpha4)"
+                          title="--grey-shade2-alpha4">
+                          <span class="huebris-swatch__label">grey-shade2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-shade3)"
+                          title="--grey-shade3">
+                          <span class="huebris-swatch__label">grey-shade3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade3-alpha1)"
+                          title="--grey-shade3-alpha1">
+                          <span class="huebris-swatch__label">grey-shade3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade3-alpha2)"
+                          title="--grey-shade3-alpha2">
+                          <span class="huebris-swatch__label">grey-shade3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade3-alpha3)"
+                          title="--grey-shade3-alpha3">
+                          <span class="huebris-swatch__label">grey-shade3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade3-alpha4)"
+                          title="--grey-shade3-alpha4">
+                          <span class="huebris-swatch__label">grey-shade3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--grey-shade4)"
+                          title="--grey-shade4">
+                          <span class="huebris-swatch__label">grey-shade4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade4-alpha1)"
+                          title="--grey-shade4-alpha1">
+                          <span class="huebris-swatch__label">grey-shade4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade4-alpha2)"
+                          title="--grey-shade4-alpha2">
+                          <span class="huebris-swatch__label">grey-shade4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade4-alpha3)"
+                          title="--grey-shade4-alpha3">
+                          <span class="huebris-swatch__label">grey-shade4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--grey-shade4-alpha4)"
+                          title="--grey-shade4-alpha4">
+                          <span class="huebris-swatch__label">grey-shade4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="huebris-card">
+              <div class="huebris-card__header">--primary</div>
+              <div class="huebris-card__base">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple)"
+                      title="--primary">
+                      <span class="huebris-swatch__label">primary</span>
+                  </div>
+              </div>
+              <div class="huebris-row huebris-row--alpha">
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-alpha1)"
+                      title="--primary-alpha1">
+                      <span class="huebris-swatch__label">primary-alpha1</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-alpha2)"
+                      title="--primary-alpha2">
+                      <span class="huebris-swatch__label">primary-alpha2</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-alpha3)"
+                      title="--primary-alpha3">
+                      <span class="huebris-swatch__label">primary-alpha3</span>
+                  </div>
+                  <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-alpha4)"
+                      title="--primary-alpha4">
+                      <span class="huebris-swatch__label">primary-alpha4</span>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tint1)"
+                          title="--primary-tint1">
+                          <span class="huebris-swatch__label">primary-tint1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint1-alpha1)"
+                          title="--primary-tint1-alpha1">
+                          <span class="huebris-swatch__label">primary-tint1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint1-alpha2)"
+                          title="--primary-tint1-alpha2">
+                          <span class="huebris-swatch__label">primary-tint1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint1-alpha3)"
+                          title="--primary-tint1-alpha3">
+                          <span class="huebris-swatch__label">primary-tint1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint1-alpha4)"
+                          title="--primary-tint1-alpha4">
+                          <span class="huebris-swatch__label">primary-tint1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tint2)"
+                          title="--primary-tint2">
+                          <span class="huebris-swatch__label">primary-tint2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint2-alpha1)"
+                          title="--primary-tint2-alpha1">
+                          <span class="huebris-swatch__label">primary-tint2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint2-alpha2)"
+                          title="--primary-tint2-alpha2">
+                          <span class="huebris-swatch__label">primary-tint2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint2-alpha3)"
+                          title="--primary-tint2-alpha3">
+                          <span class="huebris-swatch__label">primary-tint2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint2-alpha4)"
+                          title="--primary-tint2-alpha4">
+                          <span class="huebris-swatch__label">primary-tint2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tint3)"
+                          title="--primary-tint3">
+                          <span class="huebris-swatch__label">primary-tint3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint3-alpha1)"
+                          title="--primary-tint3-alpha1">
+                          <span class="huebris-swatch__label">primary-tint3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint3-alpha2)"
+                          title="--primary-tint3-alpha2">
+                          <span class="huebris-swatch__label">primary-tint3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint3-alpha3)"
+                          title="--primary-tint3-alpha3">
+                          <span class="huebris-swatch__label">primary-tint3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint3-alpha4)"
+                          title="--primary-tint3-alpha4">
+                          <span class="huebris-swatch__label">primary-tint3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tint4)"
+                          title="--primary-tint4">
+                          <span class="huebris-swatch__label">primary-tint4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint4-alpha1)"
+                          title="--primary-tint4-alpha1">
+                          <span class="huebris-swatch__label">primary-tint4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint4-alpha2)"
+                          title="--primary-tint4-alpha2">
+                          <span class="huebris-swatch__label">primary-tint4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint4-alpha3)"
+                          title="--primary-tint4-alpha3">
+                          <span class="huebris-swatch__label">primary-tint4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tint4-alpha4)"
+                          title="--primary-tint4-alpha4">
+                          <span class="huebris-swatch__label">primary-tint4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tone1)"
+                          title="--primary-tone1">
+                          <span class="huebris-swatch__label">primary-tone1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone1-alpha1)"
+                          title="--primary-tone1-alpha1">
+                          <span class="huebris-swatch__label">primary-tone1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone1-alpha2)"
+                          title="--primary-tone1-alpha2">
+                          <span class="huebris-swatch__label">primary-tone1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone1-alpha3)"
+                          title="--primary-tone1-alpha3">
+                          <span class="huebris-swatch__label">primary-tone1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone1-alpha4)"
+                          title="--primary-tone1-alpha4">
+                          <span class="huebris-swatch__label">primary-tone1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tone2)"
+                          title="--primary-tone2">
+                          <span class="huebris-swatch__label">primary-tone2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone2-alpha1)"
+                          title="--primary-tone2-alpha1">
+                          <span class="huebris-swatch__label">primary-tone2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone2-alpha2)"
+                          title="--primary-tone2-alpha2">
+                          <span class="huebris-swatch__label">primary-tone2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone2-alpha3)"
+                          title="--primary-tone2-alpha3">
+                          <span class="huebris-swatch__label">primary-tone2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone2-alpha4)"
+                          title="--primary-tone2-alpha4">
+                          <span class="huebris-swatch__label">primary-tone2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tone3)"
+                          title="--primary-tone3">
+                          <span class="huebris-swatch__label">primary-tone3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone3-alpha1)"
+                          title="--primary-tone3-alpha1">
+                          <span class="huebris-swatch__label">primary-tone3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone3-alpha2)"
+                          title="--primary-tone3-alpha2">
+                          <span class="huebris-swatch__label">primary-tone3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone3-alpha3)"
+                          title="--primary-tone3-alpha3">
+                          <span class="huebris-swatch__label">primary-tone3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone3-alpha4)"
+                          title="--primary-tone3-alpha4">
+                          <span class="huebris-swatch__label">primary-tone3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-tone4)"
+                          title="--primary-tone4">
+                          <span class="huebris-swatch__label">primary-tone4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone4-alpha1)"
+                          title="--primary-tone4-alpha1">
+                          <span class="huebris-swatch__label">primary-tone4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone4-alpha2)"
+                          title="--primary-tone4-alpha2">
+                          <span class="huebris-swatch__label">primary-tone4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone4-alpha3)"
+                          title="--primary-tone4-alpha3">
+                          <span class="huebris-swatch__label">primary-tone4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-tone4-alpha4)"
+                          title="--primary-tone4-alpha4">
+                          <span class="huebris-swatch__label">primary-tone4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="huebris-row">
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-shade1)"
+                          title="--primary-shade1">
+                          <span class="huebris-swatch__label">primary-shade1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade1-alpha1)"
+                          title="--primary-shade1-alpha1">
+                          <span class="huebris-swatch__label">primary-shade1-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade1-alpha2)"
+                          title="--primary-shade1-alpha2">
+                          <span class="huebris-swatch__label">primary-shade1-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade1-alpha3)"
+                          title="--primary-shade1-alpha3">
+                          <span class="huebris-swatch__label">primary-shade1-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade1-alpha4)"
+                          title="--primary-shade1-alpha4">
+                          <span class="huebris-swatch__label">primary-shade1-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-shade2)"
+                          title="--primary-shade2">
+                          <span class="huebris-swatch__label">primary-shade2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade2-alpha1)"
+                          title="--primary-shade2-alpha1">
+                          <span class="huebris-swatch__label">primary-shade2-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade2-alpha2)"
+                          title="--primary-shade2-alpha2">
+                          <span class="huebris-swatch__label">primary-shade2-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade2-alpha3)"
+                          title="--primary-shade2-alpha3">
+                          <span class="huebris-swatch__label">primary-shade2-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade2-alpha4)"
+                          title="--primary-shade2-alpha4">
+                          <span class="huebris-swatch__label">primary-shade2-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-shade3)"
+                          title="--primary-shade3">
+                          <span class="huebris-swatch__label">primary-shade3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade3-alpha1)"
+                          title="--primary-shade3-alpha1">
+                          <span class="huebris-swatch__label">primary-shade3-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade3-alpha2)"
+                          title="--primary-shade3-alpha2">
+                          <span class="huebris-swatch__label">primary-shade3-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade3-alpha3)"
+                          title="--primary-shade3-alpha3">
+                          <span class="huebris-swatch__label">primary-shade3-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade3-alpha4)"
+                          title="--primary-shade3-alpha4">
+                          <span class="huebris-swatch__label">primary-shade3-alpha4</span>
+                      </div>
+                  </div>
+                  <div class="huebris-col">
+                      <div class="huebris-swatch huebris-swatch--large" style="background-color: var(--purple-shade4)"
+                          title="--primary-shade4">
+                          <span class="huebris-swatch__label">primary-shade4</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade4-alpha1)"
+                          title="--primary-shade4-alpha1">
+                          <span class="huebris-swatch__label">primary-shade4-alpha1</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade4-alpha2)"
+                          title="--primary-shade4-alpha2">
+                          <span class="huebris-swatch__label">primary-shade4-alpha2</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade4-alpha3)"
+                          title="--primary-shade4-alpha3">
+                          <span class="huebris-swatch__label">primary-shade4-alpha3</span>
+                      </div>
+                      <div class="huebris-swatch huebris-swatch--small" style="background-color: var(--purple-shade4-alpha4)"
+                          title="--primary-shade4-alpha4">
+                          <span class="huebris-swatch__label">primary-shade4-alpha4</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
     </section>
 
@@ -488,7 +1408,6 @@ html {
   <script src="js/vendor/huebris.min.js"></script>
   <script>
     huebris.init();
-    huebris.showPalette( document.getElementById( 'palette' ) );
   </script>
   <script src="js/main.js"></script>
 

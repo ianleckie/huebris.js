@@ -1,0 +1,11 @@
+/* huebris.js local palette CSS - updated to better fit into site layout */
+.huebris-palette { font-family: monospace; font-size: 12px; display: flex; flex-direction: column; gap: 24px; margin: 1rem auto; color: #eee; width: fit-content; }
+.huebris-card { border: 1px solid #333; padding: 8px 16px; background: linear-gradient( 45deg, var(--black-tone3) 0%, var(--black-tone3) 25%, var(--black-tone4) 25%, var(--black-tone4) 50%, var(--black-tone3) 50%, var(--black-tone3) 75%, var(--black-tone4) 75%, var(--black-tone4) 100% ); background-size: 40px 40px; border-radius: 20px; }
+.huebris-card__header { padding: 4px 0 8px; font-weight: bold; }
+.huebris-card__base { margin-bottom: 8px; }
+.huebris-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.huebris-col { display: flex; flex-direction: column; gap: 4px; }
+.huebris-swatch { border: 1px solid #444; display: flex; align-items: flex-start; padding: 4px; box-sizing: border-box; border-radius: 10px; }
+.huebris-swatch--large { width: 140px; height: 70px; }
+.huebris-swatch--small { width: 140px; height: 50px; }
+.huebris-swatch__label { background: rgba(0,0,0,.5); color: #fff; font-size: 9px; padding: 1px 3px; line-height: 1.2; word-break: break-all; }

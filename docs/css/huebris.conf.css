@@ -1,6 +1,7 @@
 html {
     --huebris-primary:   rgb(46, 63, 79);
     --huebris-secondary: rgb(202, 230, 228);
+    --huebris-purple:    purple;
 
     --huebris-black: color-mix( in srgb, var(--primary) 20%, black 80% );
 
