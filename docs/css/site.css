@@ -238,9 +238,13 @@ table {
     margin: 0.75rem auto 2.5rem;
 }
 
+footer h2 {
+    margin-bottom: 0.75rem;
+}
+
 .tech-stack {
     list-style: none;
-    margin: 0.75rem auto;
+    margin: 0.25rem auto;
     padding: 0;
     width: fit-content;
 }
