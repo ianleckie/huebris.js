@@ -3,7 +3,7 @@ A script that automatically generates hue-based CSS color palettes - with tint, 
 
 **huebris.js** simply generates and injects CSS variables (and optional utility classes), so it can easily co-exist with different workflows and approaches.
 
-> [Download v1.0.0 (.zip)](https://github.com/ianleckie/huebris.js/releases/download/1.0.0/huebris-1.0.0.zip) | [See Example Palette](https://ianleckie.github.io/huebris.js/)
+> [Download Latest Realease](https://github.com/ianleckie/huebris.js/releases/latest) | [See Example Palette](https://ianleckie.github.io/huebris.js/)
 
 ---
 
