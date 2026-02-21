@@ -201,9 +201,14 @@ const huebris = {
             } );
 
         } else {
-            // tint / tone / shade: baseColors + grey (no tones for grey)
-            const colorTargets = Object.keys( this.baseColors );
+            // tint / tone / shade:
+            const colorTargets = [
+                ...Object.keys( this.baseColors ),
+            ];
+
+            if ( type !== 'tint' ) colorTargets.push( 'white' );
             if ( type !== 'tone' ) colorTargets.push( 'grey' );
+            if ( type !== 'shade' ) colorTargets.push( 'black' );
 
             colorTargets.forEach( colorName => {
                 steps.forEach( ( stepValue, i ) => {
